@@ -1,0 +1,16 @@
+cargo-features = ["codegen-backend"]
+
+[profile.dev]
+codegen-backend = "cranelift"
+incremental = true
+opt-level = 0
+debug = true
+
+[package]
+name = "rust-web-scraping"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+reqwest = { version = "0.12.5", features = ["blocking"] }
+scraper = "0.20.0"
